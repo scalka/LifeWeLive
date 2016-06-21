@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<!-- comment -->
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/myjavascript.js"> </script>
+		<title>Life we live - Shop</title>
+	</head>
+	
+	<body>
+		<div id="container">
+			<nav id="nav">
+				<div class="border-line"></div>
+				<ul class="menu">
+					<li class="menu"><a href="index.html">Home</a></li>
+					<li class="menu"><a href="food.html">Food</a></li>
+					<li class="menu"><a href="mind.html" class="navigation">Mind</a></li>
+					<li class="menu"><a href="dance.html">Dance</a></li>
+					<li class="menu" id="selected"><a href="shop.html" class="navigation-selected">Shop</a></li>
+					<li class="menu"><a href="about.html">About</a></li>
+				</ul>
+			</nav>	
+			<div id="wrapperBanner">	
+				<div id="grass">
+					<div id="banner">
+						
+					</div>
+				</div>	
+			</div>	
+			<div id="content">
+				<h1>Shop</h1>
+				<p>Choose the items you would like to order, your shipping country and preffered shipping method.</p>
+				<form class="shop" id="shop-tea">
+					<div class="item">
+						<h2>Yerba Mate Guarana Energy 500g</h2>
+						<div class="yerbaImg">
+							<img src="images/shop/yerba.jpg" alt="Guarana Energy"/>
+						</div>
+						<p>Specialist energy burst, made with Guarana, deliciously fruity in taste</p>
+						<div class="info">
+							<span>Price: 10&euro;</span>
+						</div>
+						<div class="order">
+							<label for="txt-q-yerba1">Quantity desired: </label>
+							<input type="number" id="txt-q-yerba1" size="3" min="0" max="10" step="1" value="0">
+						</div>
+					</div>
+					<div class="item">
+						<h2>Guayaki Organic Yerba Mate San Mateo Air Dried</h2>
+						<div class="yerbaImg">
+							<img src="images/shop/yerba2.jpg" alt="San Mateo"/>
+						</div>
+						<p>San Mateo air dried, organic, fair trade.<br>
+							Guayaki a fair and organic house of yerba mate. San Mateo, a blend that is air dried, of superior quality.</p>
+						<div class="info">
+							<span>Price: 12&euro;</span>
+						</div>
+						<div class="order">
+							<label for="txt-q-yerba2">Quantity desired: </label>
+							<input type="number" id="txt-q-yerba2" size="3" min="0" max="10" step="1" value="0">
+						</div>
+					</div>
+					<div class="item">
+						<h2>Dark Carved Mate and Bombilla Set: Dancing Bird</h2>
+						<div class="yerbaImg">
+							<img src="images/shop/mate.jpg" alt="Bombilla"/>
+						</div>
+						<p>A set consisting of an engraved, traditional mate gourd and bombilla: cup and straw for drinking yerba mate.</p>
+						<div class="info">
+							<span>Price: 15&euro;</span>
+						</div>
+						<div class="order">
+							<label for="txt-q-mate">Quantity desired: </label>
+							<input type="number" id="txt-q-mate" size="3" min="0" max="10" step="1" value="0">
+						</div>
+					</div>
+					<div id="summary">
+						<h2>Estimate Order</h2>
+							<table>
+								<tr class="countries">
+									<td>
+										<label for="s-country">Country</label>
+									</td>	
+									<td>
+										<select id="s-country">
+											<option value="">- select -</option>
+											<option value="IR">Ireland</option>
+											<option value="GB">Great Britain</option>
+											<option value="PL">Poland</option>
+											<option value="US">United States (6.5% tax)</option>
+										</select>
+									</td>	
+								</tr>	
+								<tr class="group method">
+									<td rowspan="3">
+										<label for="r-method-pickup">Shipping Method:</label><br>
+									</td>	
+									<td>
+										<input type="radio" value="pickup" name="r_method" id="r-method-pickup" checked>
+										<label for="r-method-pickup">Pickup(free)</label><br>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="radio" value="post" name="r_method" id="r-method-post" checked>
+										<label for="r-method-post">Post (2&euro;)</label><br>
+									</td>
+								</tr>
+								<tr>	
+									<td>
+										<input type="radio" value="post-express" name="r_method" id="r-method-post-express" checked>
+										<label for="r-method-post-express">Post Express (5&euro;)</label><br>
+									</td>	
+								</tr>
+
+							</table>	
+						<div class="group calc">
+							<p>
+								<input class="mybutton" type="submit" value="Estimate Total" id="btn-estimate">
+								<input type="text" id="txt-estimate" placeholder="&euro;0.00" readonly>
+							</p>	
+							<div id="results">
+							</div>
+							<input class="mybutton" type="submit" value="Order" onclick="openShopOrderDetails()">
+						</div>						
+					</div>
+				</form>
+			</div>
+			<script>
+				document.getElementById('shop-tea').addEventListener('submit', estimateTotal);
+			</script>
+			<div id="footer">
+				<!-- &copy; will display the copyright symbol -->
+				<p class="foot">&copy; 2015, Sylwia Calka. All rights reserved.</p>
+			</div>
+		</div>	
+	</body>
+</html>

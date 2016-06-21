@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/myjavascript.js"> </script>
+		<title>Life we live - Order details</title>
+	</head>
+	
+	<body>
+		<div id="container">
+			<h1 id="heading">Your details:<h1>
+			<form id="orderForm" action="" method="post" onsubmit="return ValidationEvent()">
+			<table id="order">
+				<tr>
+					<td>Name</td>
+					<td><input type="text" placeholder="Sylwia" name="fname"></td>
+				</tr>
+				<tr>
+					<td>Surname</td>
+					<td><input type="text" placeholder="Calka" name="surname"></td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td><input type="email" placeholder="e-mail@gmail.com" name="email" ></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align:top;">Address</td>
+					<td><input type="text" placeholder="line 1" name="line1"></td>
+					
+				</tr>
+				<tr>
+					<td><input type="text" placeholder="line 2" name="line2"></td>
+				</tr>
+				<tr>
+					<td><input type="text" placeholder="line 3" name="line3"></td>
+				</tr>
+				<tr>
+					<td>Mobile number</td>
+					<td><input type="text" placeholder="0112223333" name="mobile"></td>
+				</tr>
+				<tr>
+					<td>Preferable arrival date</td>
+					<td><input type="date"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" id="orderSubmit">
+					</td>	
+				</tr>
+				</form>
+			</table>		
+		</div>	
+	
+	</body>
+</html>

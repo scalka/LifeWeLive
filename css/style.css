@@ -1,0 +1,448 @@
+/* * Selects all elements */
+*{
+	font-family: 'Noto Sans', sans-serif; 
+}
+#container{
+	margin: auto;
+	width: 1124px;
+}
+#content{
+	/*clear:both;*/
+	margin:5px;
+	width: 1124px;
+}
+h1{
+	font-size: 20px;
+	font-weight: bold;
+	color: #3c3c3c; /*grey */
+}
+h2{
+	font-weight: bold;
+	font-size: 16px;
+	color: #474745; 
+}
+h3{
+	font-weight: bold;
+	color: #ffffff;
+}
+.mybutton {
+	color: rgb(255, 255, 255);
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(71, 71, 69, 1);
+	background: rgb(255, 165, 51);
+	font-size: 110%; /* make button bigger */
+}	
+/*banner with photo-------------------------------------------------------------------------------------------------------------*/
+#wrapperBanner{
+	margin: 0 auto;
+}
+	/*the background of the banner - trees */
+	#grass{
+		background: url(../images/banner/grass.jpg)  no-repeat center;
+		height: 326px;
+	}
+	/*actual banner Life we live with feather */
+	#banner{
+		background: url(../images/banner/banner.png)  no-repeat center;
+		height: 200px;
+	}
+/*line on the top-----------------------------------------------------------------------------------------------------------------*/
+.border-line{
+	position: absolute; /*The element is positioned relative to its first positioned (not static) ancestor element */
+	z-index: 2; /*the stack order of an element, elem. with > stack order is always in front, it works on positioned elements (absolute, relative, fixed)*/
+	top: 0;
+	left: 0;
+	right: 0;
+	height: .5em; /* = 8px */
+	background: #ffa533; /*orange */
+}
+/*MENU----------------------------------------------------------------------------------------------------------------------------*/
+#nav{
+	height: 40px;
+	font-size: 20px;
+	line-height: 2;
+	background-color: #ffffff;
+	margin-bottom:20px;
+}
+	ul.menu {
+		margin-top: 0;
+	}	
+		#nav li{
+			display: inline-block; /*Displays an element as an inline-level block container. The inside of this block is formatted as block-level box, and the element itself is formatted as an inline-level box*/
+			padding-left: 51px;
+			padding-right: 60px;
+			height: 40px;
+		}
+			li#selected
+			{
+				background-color:#ffa533; /*orange*/
+				color: #ffffff;
+			}
+			li.menu:hover{
+				background-color: #B7BCB8; /*light grey*/
+				transition-property: background; /*Specifies the name of the CSS property the transition effect is for*/
+				transition-duration: 1s; /*Specifies how many seconds or milliseconds the transition effect takes to complete*/
+			}
+			a.navigation-selected{
+				color: #ffffff;
+				text-decoration: none;
+			}
+			a, a.navigation:link, a.navigation:visited{
+				display: inline-block;
+				text-decoration: none;
+				color:#3c3c3c; /*dark grey*/
+			}
+			/*active link*/
+			a.navigation:active{
+				color: #ffffff;
+			} 	
+/*INDEX-------------------------------------------------------------------------------------------------------------------------------*/
+div#slideShow {
+	margin-top: 43px;
+	padding: 5px;
+	height: 596px;
+}
+#square2{
+	position: relative; /*The element is positioned -55px relative to its normal position*/
+	bottom: -55px;
+}
+#square3{
+	position: relative;
+	bottom: -130px;
+}
+div.square{
+	display: inline-block;
+	box-shadow: -0.3em -0.5em #ffa533; /*frame for the divs*/
+}
+.parag{
+	text-align:center;
+}			
+.photos{
+	width: 350px;
+	height: 350px;
+	 background-size:100% 100%;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px; 
+}
+#photo1 {
+	background-image: url(../images/index/plates.jpg);
+}
+#photo1:hover { /*pictures change on hover with transition */
+	background-image: url(../images/index/fruit.jpg);
+	transition-property: background;
+	transition-duration: 1s; 
+}
+#photo2 {
+	background-image: url(../images/index/mind.jpg);
+}
+#photo2:hover {
+	background-image: url(../images/index/mind1.jpg);
+	transition-property: background;
+	transition-duration: 1s;
+}
+#photo3 {
+	background-image: url(../images/index/dance.jpg);
+}
+#photo3:hover {
+	background-image: url(../images/index/dance2.jpg);
+	transition-property: background;
+	transition-duration: 1s;
+}
+
+/*FOOD------------------------------------------------------------------------------------------------------*/
+.hidden{
+	display:none; /*hidden divs, not active*/
+}
+#recipes { /*recipes div - whole content of this page*/
+	width: 944px;
+	margin: auto;
+	clear: both;
+	margin-top: 10px;
+	padding: 10px;
+	padding-bottom: 50px;
+}
+#foodTabs button { /*styling the button*/
+	font-size: 17px;
+	position: relative;
+	background: #ffa533;
+	padding: 0.7em 2.5em;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 0 20px 0 0;
+}
+#foodTabs button:hover {
+	color: grey;
+}
+/*tabs------------------------------*/
+ul#foodTabs {
+	overflow: hidden;
+	width: 100%;
+	list-style: none;
+	margin-bottom: 0px;
+	margin-left: -40px;
+}
+#foodTabs li {
+  float: left;
+  margin: 0;
+}
+/*table-------------------------------*/
+table#recipesTable {
+	padding: 2px;
+	background-image: linear-gradient(to top, #FFCD26, #FFA533); /*linear-gradient*/
+}
+td.foodImage{ /* 1st on the left in the table*/
+	width:200px;
+	padding: 3px;
+	vertical-align:top; /*vertical-align*/
+}
+img.recipeImage{
+	width:100%;
+	box-shadow: 10px 10px 60px 10px #fff;
+}
+td.ingredients{ /* 2nd on the left in the table*/
+	width:236px;
+	padding: 3px;
+	vertical-align:top;
+}
+td.method{ /* 3rd on the left in the table*/
+	width:472px;
+	padding: 3px;
+	vertical-align:top;
+}
+/*SHOP order details-----------------------------------------------------------------------------------------------------*/
+table#order {
+	border-top: 4px solid #ffa533;
+	border-left: 4px solid #ffa533;
+}	
+/*SHOP-------------------------------------------------------------------------------------------------------*/
+form#shop-tea {
+	padding-left: 10px;
+	font-size: 16px;
+	text-align: left;
+	margin: 20px;
+	width: 900px;
+	border: 1px solid #919183;
+	box-shadow: -0.3em -0.5em #ffa533;
+}
+div.item {
+	padding: 20px;
+}
+div#summary{
+	padding: 20px;
+}
+div.yerbaImg{
+	float:right;
+	width:100px;
+	height:100px;
+}
+.yerbaImg img{
+	width:100%;
+	height:100%;
+}
+/*MIND------------------------------------------------------------------------------------------------------*/
+DIV.timeline {
+  width: 100%;
+  height: 1400px;
+  margin: 100px 0;
+  position: relative;
+  }
+  /*line in the middle*/
+.line {
+	width: 5px;
+	height: 1300px;
+	background: #393939;
+	margin: 25px auto;
+	left: 50.4%;
+	right: 50%;
+	/*The z-index property specifies the stack order of an element.
+	An element with greater stack order is always in front of an element with a lower stack order.*/
+	z-index: 1;
+	position: absolute;
+}
+/*morning*/
+.start {
+	font-size: 32px;
+	position: absolute;
+	top: -45px;
+	left: -35px;
+}
+/*night*/
+.end {
+	font-size: 32px;
+	position: absolute;
+	bottom: -45px;
+	left: -35px;
+}
+div.event {
+	width: 43%;
+	height: 200px;
+	text-align: center;
+	box-shadow: 0.5em 0.3em #ffa533;
+	margin: 50px 0 0 5%;
+	padding: 25px;
+	background: #fff;
+	z-index: 2;
+	float: left;
+	/*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include.
+	Should they include the border-box or just the content-box which is the default value of the width and height properties.*/
+	box-sizing: border-box;
+	position: relative;
+}
+/*hidden divs to have alternate divs visible*/
+/*The :nth-of-type(n) selector matches every element that is the nth child, of a particular type, of its parent.*/
+/*ex. odd or even*/
+.event:nth-child(3), .event:nth-child(4), .event:nth-child(7), .event:nth-child(8) {
+	visibility: hidden;
+}
+/*triangles*/
+.event:nth-child(5):before, .event:nth-child(9):before{
+	content:"";
+	position: absolute;
+	right: 100%;
+	top: 26px;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent; /*actual width and height of the arrow is determined by the width of the border*/
+	border-right: 26px solid #ffa533;
+	border-bottom: 13px solid transparent;
+}
+.event:nth-child(2):after, .event:nth-child(6):after, .event:nth-child(10):after{
+	content:"";
+   position: absolute;
+   left: 100%;
+   bottom: 191px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-left: 26px solid #ffa533;
+   border-bottom: 13px solid transparent;
+}
+div.time {
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffa533;
+}
+div.details {
+	font-weight: 400;
+	font-size: 1rem;
+	margin: 20px 0;
+	padding: 0;
+	text-align:left;
+}
+/*display determined by the time of the day - JavaScript*/
+.displayNone{
+	display:none;
+}
+#footer{
+	clear:all;
+	font: #131311;
+}
+/*DANCE---------------------------------------------------------------------------------------------------*/
+div#dance {
+	padding: 20px;
+	margin: 5%;
+	display:inline-block;
+}
+div#video{
+	width:560;
+	height:315;
+	float:left;
+}
+div#dancehall {
+	width: 380px;
+	float: right;
+	padding-left: 15px;
+}
+/*ABOUT--------------------------------------------------------------------------------------------------*/
+div#me{ /*div for content with "content"*/
+	margin-left:20%;
+	margin-right:20%;
+}
+#myphoto{
+	background-image: url(../images/index/me.jpg);
+	margin-left: 22%; /*center aligned*/
+	margin-right: 22%;
+	margin-top: 39px;
+}
+div.aboutMe{
+	display: inline-block;
+	box-shadow: -0.3em -0.5em #ffa533; /*frame for the divs*/
+}
+div#foodLover {
+	position: relative;
+	bottom: 349px;
+	left: -207px;
+	padding-left: 10px;
+}
+div#travelA {
+	position: relative;
+	bottom: 228px;
+	right: 218px;
+	padding-left: 10px;
+}
+div#futureWeb {
+	position: relative;
+	bottom: 113px;
+	right: 347px;
+	padding-left: 10px;
+}
+div#dhl {
+	position: relative;
+	bottom: 349px;
+	left: 319px;
+	padding-left: 10px;
+}
+div#amateurPh {
+	position: relative;
+	bottom: 272px;
+	left: 663px;
+	padding-left: 10px;
+}
+div#positive {
+	position: relative;
+	bottom: 145px;
+	left: 398px;
+	padding-left: 10px;
+}
+.hR:after{ /*header right triangle*/
+	content:"";
+	position: absolute;
+	left: -28%;
+	bottom: 16px;
+	border-top: 13px solid transparent; /*actual width and height of the arrow is determined by the width of the border*/
+	border-right: 26px solid #ffa533;
+	border-bottom: 13px solid transparent;
+}
+.hL:after{ /*header left triangle*/
+	content:"";
+   position: absolute;
+   left: 108%;
+	bottom: 10px;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-left: 26px solid #ffa533;
+   border-bottom: 13px solid transparent;
+  }
+#email{ /*gmail div with image*/
+	position: relative;
+  bottom: 433px;
+  left: 362px;
+  padding-left: 10px;
+  width: 100px;
+  height: 100px;
+}
+#gmailImg{ /*gmail image*/
+	width:100%;
+	height:100%;
+}
+/*FOOTER---------------------------------------------------------------------------------------*/
+.foot{
+ color: #82BD63;
+  border-top: 1px solid #ffa533;
+  padding: 10px;
+  text-align: center;
+ } 
